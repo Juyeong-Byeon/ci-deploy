@@ -1,0 +1,16 @@
+name: test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  jest-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: "main"
+      - run: npm run test
+      - run: echo "success"
