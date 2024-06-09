@@ -54,15 +54,13 @@ release:
         - type: "test"
         - hidden: true
       presetConfig: true
-prepare:
-  - path: "@semantic-release/git"
-  - path: "@semantic-release/changelog"
-    changelogFile: "docs/CHANGELOG.md"
-publish:
-  - path: "@semantic-release/github"
-
-success:
-  - "@semantic-release/github"
-
-fail:
-  - "@semantic-release/github"
+  prepare:
+    - path: "@semantic-release/git"
+    - path: "@semantic-release/changelog"
+      changelogFile: "docs/CHANGELOG.md"
+  publish:
+    - path: "@semantic-release/github"
+  success:
+    - "@semantic-release/github"
+  fail:
+    - "@semantic-release/github"
