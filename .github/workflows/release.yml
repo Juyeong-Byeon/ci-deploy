@@ -28,6 +28,8 @@ jobs:
       - run: npm run lint
       - run: tsc --build --dry
   release-sementic:
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     needs: [run-test, static-analize]
     runs-on: ubuntu-latest
     steps:
