@@ -26,9 +26,9 @@ jobs:
           node-version: latest
       - run: npm ci
       - run: npm run lint
-      - run: npm run tsc
+      - run: tsc --build --dry
   release-sementic:
-    needs: run-test
+    needs: [run-test, static-analize]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
