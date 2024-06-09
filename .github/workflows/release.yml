@@ -1,5 +1,4 @@
-name: test
-
+name: release
 on:
   push:
     branches:
@@ -14,6 +13,18 @@ jobs:
           ref: "main"
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: latest
+      - run: npm ci
+      - run: npm run test
+  release-sementic:
+    needs: jest-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "main"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
       - run: npm ci
       - run: npx semantic-release
