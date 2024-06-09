@@ -3,9 +3,8 @@ on:
   push:
     branches:
       - main
-
 jobs:
-  jest-test:
+  run-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,8 +15,20 @@ jobs:
           node-version: latest
       - run: npm ci
       - run: npm run test
+  static-analize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: "main"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: latest
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run tsc
   release-sementic:
-    needs: jest-test
+    needs: run-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
