@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": ".",
   "repository": {
     "type": "git",
     "url": "https://github.com/Juyeong-Byeon/ci-deploy.git"
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.6",
     "@types/jest": "^29.5.12",

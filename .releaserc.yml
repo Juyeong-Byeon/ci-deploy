@@ -7,6 +7,7 @@ release:
     - "@semantic-release/changelog"
     - "@semantic-release/github"
     - "@semantic-release/git"
+    - "@semantic-release/exec"
   analyzeCommits:
     - path: "@semantic-release/commit-analyzer"
       releaseRules:
@@ -59,6 +60,8 @@ release:
       changelogFile: "docs/CHANGELOG.md"
   publish:
     - path: "@semantic-release/github"
+    - path: "@semantic-release/exec"
+      cmd: "npm run build"
   success:
     - "@semantic-release/github"
   fail:
