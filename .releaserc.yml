@@ -7,6 +7,7 @@ release:
     - "@semantic-release/changelog"
     - "@semantic-release/github"
     - "@semantic-release/git"
+    - "@semantic-release/exec"
   analyzeCommits:
     - path: "@semantic-release/commit-analyzer"
       releaseRules:
@@ -62,6 +63,8 @@ release:
         - "CHANGELOG.md"
   publish:
     - path: "@semantic-release/github"
+    - path: "@semantic-release/exec"
+      publishCmd: "npm run build&& aws s3 sync ./dist s3://matthew-deploy-ci-test-dev-south-kr --profile=deploy-ci"
   success:
     - "@semantic-release/github"
   fail:
