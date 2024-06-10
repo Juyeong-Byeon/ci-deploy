@@ -8,6 +8,7 @@ release:
     - "@semantic-release/github"
     - "@semantic-release/git"
     - "@semantic-release/exec"
+    - "@rimac-technology/semantic-release-s3"
   analyzeCommits:
     - path: "@semantic-release/commit-analyzer"
       releaseRules:
@@ -64,7 +65,10 @@ release:
   publish:
     - path: "@semantic-release/github"
     - path: "@semantic-release/exec"
-      publishCmd: "npm run build&& aws s3 sync ./dist s3://matthew-deploy-ci-test-dev-south-kr --profile=deploy-ci"
+      publishCmd: "npm run build"
+    - path: "@rimac-technology/semantic-release-s3"
+      s3Bucket: "matthew-deploy-ci-test-dev-south-kr"
+      directoryPath: "dist"
   success:
     - "@semantic-release/github"
   fail:
