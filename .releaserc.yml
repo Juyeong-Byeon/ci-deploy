@@ -55,8 +55,11 @@ release:
       presetConfig: true
   prepare:
     - path: "@semantic-release/git"
+      assets:
+        - "package.json"
+        - "CHANGELOG.md"
     - path: "@semantic-release/changelog"
-      changelogFile: "docs/CHANGELOG.md"
+        changelogFile: "CHANGELOG.md"
   publish:
     - path: "@semantic-release/github"
   success:
