@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.10.0...v1.11.0) (2024-06-11)
+
+### Features
+
+*  backmerge test ([a84e9dd](https://github.com/Juyeong-Byeon/ci-deploy/commit/a84e9dd75b29523f923e86814560b4da77870878))
+*  backmerge test 2 ([6de0d3e](https://github.com/Juyeong-Byeon/ci-deploy/commit/6de0d3e7829acdccc553dc24bf561405a7027e35))
+
 ## [1.10.0](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.9.0...v1.10.0) (2024-06-11)
 
 ### Features
