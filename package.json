@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@rimac-technology/semantic-release-s3": "^2.4.0",
+    "@saithodev/semantic-release-backmerge": "^4.0.1",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/exec": "^6.0.3",

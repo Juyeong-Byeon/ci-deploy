@@ -13,10 +13,13 @@ plugins:
   - "@semantic-release/exec"
   - "@semantic-release/git"
   - "@semantic-release/github"
+  - "@saithodev/semantic-release-backmerge"
 
 verifyConditions:
   - "@semantic-release/git"
   - "@semantic-release/github"
+  - path: "@saithodev/semantic-release-backmerge"
+    
 
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
@@ -86,3 +89,11 @@ success:
   - path: "@semantic-release/github"
 fail:
   - path: "@semantic-release/github"
+done: 
+  - path: "@saithodev/semantic-release-backmerge"
+  backmergeBranches:
+    - from: main
+      to: stage
+  backmergeStrategy: "rebase"
+  message: "chore(release): backmerge ${nextRelease.version} [skip ci]"
+  
