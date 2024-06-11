@@ -86,12 +86,11 @@ publish:
   - path: "@semantic-release/github"
 success:
   - path: "@semantic-release/github"
-fail:
-  - path: "@semantic-release/github"
-done:
   - path: "@saithodev/semantic-release-backmerge"
     backmergeBranches:
       - from: main
         to: stage
     backmergeStrategy: "rebase"
     message: "chore(release): backmerge ${nextRelease.version} [skip ci]"
+fail:
+  - path: "@semantic-release/github"
