@@ -27,7 +27,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: tsc --build --dry
-  release-sementic:
+  release:
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

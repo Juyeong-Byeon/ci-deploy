@@ -24,44 +24,21 @@ release:
           release: "major"
   generateNotes:
     - path: "@semantic-release/release-notes-generator"
-      writerOpts:
-        groupBy: "type"
-        commitGroupsSort:
-          - "feat"
-          - "perf"
-          - "fix"
-        commitsSort: "header"
       types:
         - type: "feat"
         - section: "Features"
         # Tracked bug fix with a hotfix branch
         - type: "hotfix"
         - section: "Bug Fixes"
-        # Uninmportent fix (CI testing, etc)
-        - type: "fix"
-        - hidden: true
-        - type: "chore"
-        - hidden: true
-        - type: "docs"
-        - hidden: true
-        - type: "doc"
-        - hidden: true
-        - type: "style"
-        - hidden: true
-        - type: "refactor"
-        - hidden: true
-        - type: "perf"
-        - hidden: true
-        - type: "test"
-        - hidden: true
       presetConfig: true
   prepare:
     - path: "@semantic-release/changelog"
-      changelogFile: "CHANGELOG.md"
+      changelogFile: "docs/CHANGELOG.md"
+      changelogTitle: "# Changelog"
     - path: "@semantic-release/git"
       assets:
         - "package.json"
-        - "CHANGELOG.md"
+        - "docs/CHANGELOG.md"
   publish:
     - path: "@semantic-release/github"
     - path: "@semantic-release/exec"
