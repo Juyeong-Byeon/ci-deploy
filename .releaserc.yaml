@@ -19,6 +19,10 @@ verifyConditions:
   - "@semantic-release/git"
   - "@semantic-release/github"
   - path: "@saithodev/semantic-release-backmerge"
+    branches:
+      - from: main
+        to: stage
+    backmergeStrategy: merge
 
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
