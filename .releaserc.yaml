@@ -90,7 +90,7 @@ success:
     backmergeBranches:
       - from: main
         to: stage
-    backmergeStrategy: "rebase"
+    backmergeStrategy: "merge"
     message: "chore(release): backmerge ${nextRelease.version} [skip ci]"
 fail:
   - path: "@semantic-release/github"
