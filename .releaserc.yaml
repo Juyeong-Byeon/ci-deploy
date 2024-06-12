@@ -19,6 +19,10 @@ verifyConditions:
   - "@semantic-release/git"
   - "@semantic-release/github"
   - path: "@saithodev/semantic-release-backmerge"
+    branches:
+      - from: main
+        to: stage
+    backmergeStrategy: merge
 
 analyzeCommits:
   - path: "@semantic-release/commit-analyzer"
@@ -90,7 +94,7 @@ success:
     backmergeBranches:
       - from: main
         to: stage
-    backmergeStrategy: "rebase"
+    backmergeStrategy: "merge"
     message: "chore(release): backmerge ${nextRelease.version} [skip ci]"
 fail:
   - path: "@semantic-release/github"
