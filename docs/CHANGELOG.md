@@ -1,3 +1,9 @@
+## [1.14.0](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.13.0...v1.14.0) (2024-06-20)
+
+### Features
+
+* edit main ([0555d17](https://github.com/Juyeong-Byeon/ci-deploy/commit/0555d17736c6d8ed6f79201e7be989b0d16d26e7))
+
 ## [1.14.0-rc.1](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.13.0...v1.14.0-rc.1) (2024-06-20)
 
 ### Features
