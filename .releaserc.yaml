@@ -86,8 +86,7 @@ prepare:
 
 build:
   - path: "@semantic-release/exec"
-    prepareCmd: |
-      npm run build
+    buildCmd: npm run build
 publish:
   - path: "@semantic-release/github"
   - path: "@semantic-release/exec"
