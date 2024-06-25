@@ -31,6 +31,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
     permissions:
       contents: write
       pull-requests: write
@@ -42,5 +43,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: latest
+      - uses: aws-actions/configure-aws-credentials@v4.0.2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "ap-northeast-2"
       - run: npm ci
       - run: npx semantic-release
