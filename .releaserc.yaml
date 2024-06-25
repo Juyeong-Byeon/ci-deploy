@@ -86,9 +86,9 @@ prepare:
 
 publish:
   - path: "@semantic-release/github"
-   - path: "@semantic-release/exec"
-    publishCmd: |
-      aws s3 cp --recursive --region ap-northeast-2 dist s3://matthew-deploy-ci-test-dev-south-kr/
+  - path: "@semantic-release/exec"
+      publishCmd: |
+        aws s3 cp --recursive --region ap-northeast-2 dist s3://matthew-deploy-ci-test-dev-south-kr/
 success:
   - path: "@semantic-release/github"
   - path: "@saithodev/semantic-release-backmerge"
