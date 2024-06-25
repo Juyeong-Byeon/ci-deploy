@@ -87,7 +87,7 @@ publish:
   - path: "@semantic-release/github"
   - path: "@semantic-release/exec"
     publishCmd: |
-      ls && npm run build && aws s3 sync ./dist s3://matthew-deploy-ci-test-dev-south-kr --profile=deploy-ci
+      npm run build && ls && aws s3 sync ./dist s3://matthew-deploy-ci-test-dev-south-kr --profile=deploy-ci
 success:
   - path: "@semantic-release/github"
   - path: "@saithodev/semantic-release-backmerge"
