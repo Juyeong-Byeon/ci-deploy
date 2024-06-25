@@ -1,3 +1,9 @@
+## [1.15.0-rc.6](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.15.0-rc.5...v1.15.0-rc.6) (2024-06-25)
+
+### Features
+
+* edit publish8 ([da87be3](https://github.com/Juyeong-Byeon/ci-deploy/commit/da87be3dc4f5b63e8303abad5f332456db01ce33))
+
 ## [1.15.0-rc.5](https://github.com/Juyeong-Byeon/ci-deploy/compare/v1.15.0-rc.4...v1.15.0-rc.5) (2024-06-25)
 
 ### Features
